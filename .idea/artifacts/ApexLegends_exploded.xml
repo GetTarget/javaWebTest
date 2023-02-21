@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ApexLegends exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ApexLegends_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ApexLegends" />
+          <element id="library" level="application" name="axios" />
+          <element id="library" level="application" name="vue" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.30" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.19.4" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:1.2.15" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ApexLegends/web/Web" />
+    </root>
+  </artifact>
+</component>

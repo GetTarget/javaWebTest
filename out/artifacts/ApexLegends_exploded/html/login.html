@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/loginStyle.css" type="text/css" rel="stylesheet">
+    <title>登录</title>
+</head>
+<body>
+<div id="inputBox">
+    <h1 id = "boxTitle"><span id="title1">Apex</span><span id="title2">Legends</span></h1>
+    <form action="#" method="post">
+        <div class="inputItem">
+            <label for="accountInput">账号:</label><input id="accountInput" type="text" name="account" placeholder="Account">
+            <div id="accountError"></div>
+        </div>
+        <div class="inputItem">
+            <label for="passwordInput">密码:</label><input id="passwordInput" name="password" type="password" placeholder="Password">
+            <div id="passwordError"></div>
+        </div>
+        <button type="submit">登录</button>
+    </form>
+    <a href="./register.html" id="jumpLink">
+        没有账号?去注册
+    </a>
+</div>
+<script  src="../JavaScript/axios.js"></script>
+<script>
+    var accountReg = /^\w{3,10}$/;
+    var passwordReg = /^\w{6,20}$/;
+    var accountInput = document.getElementById("accountInput");
+    var accountError = document.getElementById("accountError");
+    var passwordInput = document.getElementById("passwordInput");
+    var passwordError = document.getElementById("passwordError");
+
+    accountInput.onblur = function() {
+        var account = accountInput.value.trim();
+        var regResult = accountReg.test(account);
+        if(account == "" || regResult)
+        {
+            accountError.innerHTML = "";
+        }
+        else
+        {
+            accountError.innerHTML = "账号仅能为3至10位字母、数字和下划线";
+        }
+    }
+
+    passwordInput.onblur = function() {
+        var password = passwordInput.value.trim();
+        var regResult = passwordReg.test(password);
+        if(password == "" || regResult)
+        {
+            passwordError.innerHTML = "";
+        }
+        else
+        {
+            passwordError.innerHTML = "密码仅能为6至20位字母、数字和下划线";
+        }
+    }
+
+</script>
+</body>
+</html>

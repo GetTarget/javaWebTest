@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ApexLegends">
+    <output-path>$PROJECT_DIR$/out/artifacts/ApexLegends</output-path>
+    <root id="archive" name="ApexLegends.war">
+      <element id="artifact" artifact-name="ApexLegends exploded" />
+    </root>
+  </artifact>
+</component>
